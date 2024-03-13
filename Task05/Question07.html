@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count child elements using jQuery.</title>
+    <script type="text/javascript" src="jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <div id="selected">
+        <p>Red</p>
+        <p>White</p>
+        <p>Green</p>
+        <p>Black</p>
+        <p>Blue</p>
+        <p>Orange</p>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            var childCount = $('#selected').children().length;
+            console.log('Number of child elements:', childCount);
+        });
+    </script>
+</body>
+</html>

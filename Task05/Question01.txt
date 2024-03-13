@@ -1,0 +1,13 @@
+Lab Task 1: 
+Describe the method to use comments in HTML, CSS, and JavaScript with 
+appropriate example.
+
+In Html, we use the following syntax for single line and multiple lines. <!----> 
+<!-- This is comment -->
+
+In CSS, we use the following syntax for single line and multiple lines. /**/
+/* This is comment */
+
+In JavaScript, we use the following syntax // and for multiple lines, we use /* */
+// This is comment for single line
+/* This is comment for multiple lines in JavaScript */

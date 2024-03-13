@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="jquery-3.7.1.min.js"></script>
+    <title>Question No 03</title>
+
+    <style>
+        .container{
+            position: absolute;
+            height: 200px;
+            width:  45%;
+            left: 25%;
+            top: 10%;
+        }
+
+        #myImage{
+            width: 95%;
+        }
+
+        #toggleButton{
+            font-size: large;
+            background-color: cadetblue;
+            width: 95%;
+            height: 50px;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <div class="container">
+        <button id="toggleButton">Hide Image</button><br/>
+        <img src="animated-smiley-emoji_920272-111.avif" alt="Smile Emoji" id="myImage"/>       
+    </div>
+</body>
+
+<script>
+    $(document).ready(function() {
+        $("#toggleButton").click(function() {
+            $("#myImage").toggle();
+            var buttonText = $(this).text() === "Show Image" ? "Hide Image" : "Show Image";
+            $(this).text(buttonText);
+        });
+    });
+</script>
+
+</html>

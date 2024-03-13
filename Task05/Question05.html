@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question No 05</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <style>
+        .container{
+            position: absolute;
+            height: 200px;
+            width:  45%;
+            left: 25%;
+            top: 10%;
+        }
+
+        #myImage{
+            width: 95%;
+            display: block; /* Ensures image is initially visible */
+        }
+
+        #toggleButton{
+            font-size: large;
+            background-color: cadetblue;
+            width: 95%;
+            height: 50px;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <div class="container">
+        <button id="toggleButton">Click Me</button><br/>         
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('#toggleButton').click(function() {
+                var clickedClass = $(this).attr('class');
+                var clickedID = $(this).attr('id');
+                alert('Clicked element class:', clickedClass);
+                alert('Clicked element ID:', clickedID);
+            });
+        });
+    </script>
+</body>
+</html>
