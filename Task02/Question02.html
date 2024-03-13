@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question No 02</title>
+
+    <style>
+        body{
+            background-color:#FDE7C9 ;
+        }
+
+        .container{
+            position: absolute;
+            top: 50%;
+            left:  50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            height:  550px;
+            width:   400px;
+            border:  2px solid rgb(54, 50, 50);
+            border-radius: 5px;
+            background-color: 	#FA8072;
+            padding: 20px;
+        }
+
+        input[type=text], select {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+             box-sizing: border-box;
+            }
+
+        input[type=email], select {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        input[type=submit] {
+            width: 100%;
+            background-color: #c71821;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+             background-color: #c71821;
+        }
+    
+        input[type=date], select{
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+    </style>
+
+    <script>
+        function formValidation() {
+            let username = document.getElementById('username').value;
+            let password = document.getElementById('password').value;
+            let number = document.getElementById('number').value;
+            let birthdate = document.getElementById('birthdate').value;
+            let gender = document.getElementById('gender').value;
+            let Zipcode = document.getElementById('Zipcode').value;
+            let country = document.getElementById('country').value;
+            let email = document.getElementById('email').value;
+
+            if (username === "")
+            {
+                seterror("username", "Username is required.");  
+                return false;
+            } 
+            if(password === "")
+            {
+                alert("Password cannot be empty");
+                return false;
+            } 
+            if(number === "")
+            {
+              alert('Phone Number is required');
+              return false;
+            } 
+
+            if(birthdate === "")
+            {
+                alert('Birth Date is required');
+              return false;
+            } 
+
+            if(email === "") {
+                alert('Email is required');
+              return false;
+            }
+
+            if (gender === '') 
+            {
+              alert('Gender is required');
+                return false;
+            }
+
+            if (Zipcode === '') 
+            {
+                alert('Zipcode is required');
+                return false;
+            }  
+
+            if (country === '') 
+             {
+                 alert('Country is required');
+                return false;
+             }
+
+             if (submit === submit) 
+             {
+                 alert('Submitted!');
+                 return false;
+              }
+
+
+            let emailRegex = "aysha.naem@gmail.com";
+            if (!emailRegex.test(email)) {
+                alert("Invalid email format");
+                return false;
+            }
+
+            if (isNaN(number))
+            {
+                alert("Number should be a valid numeric value");
+                return false;
+            }
+            return true;
+        }
+    </script>
+
+</head>
+<body>
+    
+    <div class="container"  onsubmit="return formValidation()">
+        <form class="signup">
+                <input type="text" id="username" placeholder="Username*"><br>
+                <input type="text" id="password" placeholder="Password*"><br>
+                <input type="text" id="number" placeholder="Number*"><br>
+                <input type="date" id="birthdate" placeholder="Birth Date*"><br>
+                <select id="gender" name="gender" placeholder="Gender*">
+                  <option value="male">Male</option>    
+                  <option value="female">Female</option>  
+                </select><br>
+                <input type="text" id="Zipcode" placeholder="Zipcode*"><br>
+                <select id="country" name="Country" placeholder="Country*">
+                    <option value="Pakistan">Pakistan</option>    
+                    <option value="India">India</option>  
+                  </select><br>
+                <input type="email" id="email" placeholder="Email id*"><br>
+                <input type="submit" id="register" value="Register" >   
+        </form>
+    </div>
+
+</body>
+</html>

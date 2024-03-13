@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question No 04</title>
+
+    <style>
+
+        .card {
+            position: absolute;
+            top: 20%;
+            left:  50%;
+            text-align: center;
+            height:  350px;
+            width:   400px;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            transform: translateX(-50%);
+            animation: slideIn 5s ease-out;
+        }
+
+        .card:hover {
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            animation: none;
+        }
+
+        .container {
+            padding: 2px 16px;
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateX(-50%);
+            }
+            100% {
+                transform: translateX(calc(50% - 200px));
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="nature pic.jpg" alt="Nature Image" style="width: 100%" >
+        <div class="container">
+            <h3>Ponta Delgada Island Azores</h3>
+        </div>
+    </div>
+</body>
+</html>
