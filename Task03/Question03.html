@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+
+    <form id="calculatorForm">
+        <label for="num1">Enter first number:</label>
+        <input type="text" id="num1" name="num1" required><br><br>
+
+        <label for="num2">Enter second number:</label>
+        <input type="text" id="num2" name="num2" required><br><br>
+
+        <button type="button" onclick="calculate()">Calculate</button>
+    </form>
+
+    <h3>Results:</h3>
+    <p id="addResult">Addition: </p>
+    <p id="subtractResult">Subtraction: </p>
+    <p id="multiplyResult">Multiplication: </p>
+    <p id="divideResult">Division: </p>
+
+    <script>
+        function calculate() {
+            var num1 = parseFloat(document.getElementById('num1').value);
+            var num2 = parseFloat(document.getElementById('num2').value);
+
+            if (!isNaN(num1) && !isNaN(num2)) {
+                document.getElementById('addResult').textContent = 'Addition: ' + (num1 + num2);
+                document.getElementById('subtractResult').textContent = 'Subtraction: ' + (num1 - num2);
+                document.getElementById('multiplyResult').textContent = 'Multiplication: ' + (num1 * num2);
+                
+                if (num2 !== 0) {
+                    document.getElementById('divideResult').textContent = 'Division: ' + (num1 / num2);
+                } else {
+                    document.getElementById('divideResult').textContent = 'Division: Cannot divide by zero';
+                }
+            } else {
+                alert('Please enter valid numbers.');
+            }
+        }
+    </script>
+
+</body>
+</html>

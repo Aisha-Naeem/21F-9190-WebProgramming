@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Table</title>
+</head>
+<body>
+
+    <script>
+        function printTable() {
+            var userInput = prompt("Enter a number:");
+
+            var number = parseInt(userInput);
+
+            if (!isNaN(number)) {
+                var tableOutput = "Table of " + number + ":<br>";
+                for (var i = 1; i <= 10; i++) {
+                    tableOutput += `${number} x ${i} = ${number * i}<br>`;
+                }
+                document.body.innerHTML += tableOutput;
+            } else {
+                alert("Invalid input. Please enter a valid number.");
+            }
+        }
+
+        printTable();
+    </script>
+
+</body>
+</html>

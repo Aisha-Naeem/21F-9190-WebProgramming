@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Month Days</title>
+</head>
+<body>
+
+    <script>
+        function displayMonthDays() {
+
+            var userInput = prompt("Enter the name of the month (e.g., Jan, Feb):");
+
+            var monthName = userInput.toUpperCase();
+
+            var daysInMonth = {
+                JAN: 31,
+                FEB: 28, 
+                MAR: 31,
+                APR: 30,
+                MAY: 31,
+                JUN: 30,
+                JUL: 31,
+                AUG: 31,
+                SEP: 30,
+                OCT: 31,
+                NOV: 30,
+                DEC: 31
+            };
+
+            if (daysInMonth.hasOwnProperty(monthName)) {
+                var resultParagraph = document.createElement('p');
+                resultParagraph.textContent = `Total days in ${monthName}: ${daysInMonth[monthName]}`;
+                resultParagraph.style.color = 'red';
+                document.body.appendChild(resultParagraph);
+            } else {
+                alert("Invalid month name. Please enter a valid month abbreviation (e.g., Jan, Feb).");
+            }
+        }
+
+        displayMonthDays();
+    </script>
+
+</body>
+</html>
